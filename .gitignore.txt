@@ -1,0 +1,17 @@
+# Systémové soubory
+.DS_Store
+Thumbs.db
+
+# Editorové konfigurace
+.vscode/
+.idea/
+
+# Dočasné soubory
+*.bak
+*.tmp
+*.log
+
+# Budoucí build složky
+node_modules/
+dist/
+build/

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zbytkovník 🍽️</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Zbytkovník 🍽️</h1>
+  <p id="promptMessage" style="text-align:center; color:#777;">
+    Zadej suroviny, které máš v lednici a klikni na „Najít recepty“.
+  </p>
+  <input type="text" id="fridgeInput" placeholder="např. vejce, rajče, sýr">
+  <div style="text-align:center;">
+    <button id="voiceButton">🎤 Řekni suroviny</button>
+    <button id="searchButton">Najít recepty</button>
+  </div>
+  <div id="voiceStatus" style="text-align:center;"></div>
+  <div id="recipeList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
