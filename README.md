@@ -9,6 +9,5 @@
 - Jednoduché a přehledné uživatelské rozhraní
 - Stylové pozadí a ikona pro příjemný vizuální zážitek
 
-## 📁 Struktura projektu
 
 
