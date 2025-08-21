@@ -119,17 +119,6 @@ button:hover {
   margin-bottom: 8px;
   color: #e67e22;
 }
-
-
-/* Animace */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Tmavý režim */
-
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1e1e1e;
@@ -184,37 +173,51 @@ button:hover {
 }
 
 /* Responzivní úpravy pro mobilní zařízení */
-  /* Mobilní optimalizace */
-@media (max-width: 600px) {
-  body {
-    background-size: contain;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-
+ @media (max-width: 768px) {
   input[type="text"] {
-    font-size: 14px;
-    padding: 8px;
-    max-width: 100%;
+    display: flex;
+    max-width: 150px; 
+  align-items: center;
+  
+}
+}
+
+@media (max-width: 600px) {
+  input[type="text"] {
+    display: flex;  
+  max-width: 150px; 
+  align-items: center;
+  
+}
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
+  input[type="text"],
   button {
+    width: 100%;
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 10px;
+  }
+
+  .mic-icon {
+    width: 32px;
+    height: 32px;
   }
 
   h1 {
-    font-size: 1.5em;
+    font-size: 1.6em;
+    margin-bottom: 10px;
   }
 
-  .recipe {
-    padding: 0.8em;
-  }
-
-  #voiceStatus {
-    font-size: 14px;
-    padding: 8px;
+  .overlay {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 10px;
   }
 }
 
