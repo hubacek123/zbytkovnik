@@ -8,17 +8,16 @@
 </head>
 <body>
   <h1>Zbytkovník 🍽️</h1>
-  <p id="promptMessage" style="text-align:center; color:#777;">
+  <p id="promptMessage" style="text-align:center; color:#fff;">
     Zadej suroviny, které máš v lednici a klikni na „Najít recepty“.
   </p>
-  <input type="text" id="fridgeInput" placeholder="např. vejce, rajče, sýr">
+  <input type="text" id="fridgeInput" placeholder="např. rajče, sýr">
   <div style="text-align:center;">
-    <button id="voiceButton">🎤 Řekni suroviny</button>
+    <button id="voiceButton">🎤 ...nebo nahlas řekni minimálně dvě suroviny, např. rajče, sýr</button>    
     <button id="searchButton">Najít recepty</button>
   </div>
   <div id="voiceStatus" style="text-align:center;"></div>
-  <div id="recipeList"></div>
-
+  <div id="recipeList"></div>  
   <script src="script.js"></script>
 </body>
 </html>

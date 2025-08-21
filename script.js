@@ -11,16 +11,22 @@ fetch("recipes.json")
 // Po načtení DOMu
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("searchButton");
+  const fridgeInput = document.getElementById("fridgeInput");
+  const voiceButton = document.getElementById("voiceButton");
 
   if (button) {
     button.addEventListener("click", findRecipes);
   }
 
-  document.getElementById("fridgeInput").addEventListener("input", () => {
-    document.getElementById("promptMessage").style.display = "none";
-  });
+  if (fridgeInput) {
+    fridgeInput.addEventListener("input", () => {
+      document.getElementById("promptMessage").style.display = "none";
+    });
+  }
 
-  document.getElementById("voiceButton").addEventListener("click", startVoiceInput);
+  if (voiceButton) {
+    voiceButton.addEventListener("click", startVoiceInput);
+  }
 });
 
 // Funkce pro hledání receptů
@@ -50,8 +56,10 @@ function findRecipes() {
     const suggestions = ["rajče, sýr", "okurka, vejce", "rajče, salát", "vejce, máslo"];
     const random = suggestions[Math.floor(Math.random() * suggestions.length)];
     recipeList.innerHTML = `
-      <p>😕 Žádný recept neodpovídá zadaným surovinám.</p>
-      <p>Zkus přidat další suroviny. Např. <strong>${random}</strong>.</p>
+      <div class="no-results">
+        <p>😕 Žádný recept neodpovídá zadaným surovinám.</p>
+        <p>Zkus přidat další suroviny. Např. <strong>${random}</strong></p>
+      </div>
     `;
     return;
   }

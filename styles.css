@@ -1,16 +1,25 @@
 /* Základní styl */
 body {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
   font-family: 'Segoe UI', sans-serif;
+  background-image: url('images/pozadi.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: #f9f9f9;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
-  color: #333;
+  color: #000;
   transition: background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
 }
 
 h1 {
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
 }
 
 input[type="text"] {
@@ -59,6 +68,15 @@ button:hover {
   border-radius: 8px;
 }
 
+.recipe h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.recipe p {
+  margin: 5px 0;
+}
+
 .missing {
   color: #d9534f;
   font-style: italic;
@@ -66,17 +84,28 @@ button:hover {
 
 /* Barvy podle počtu shod */
 .recipe[data-match="1"] {
-  border-left-color: #f39c12; /* oranžová */
+  border-left-color: #f39c12;
 }
 
 .recipe[data-match="2"] {
-  border-left-color: #27ae60; /* zelená */
+  border-left-color: #27ae60;
 }
 
 .recipe[data-match="3"],
 .recipe[data-match="4"],
 .recipe[data-match="5"] {
-  border-left-color: #2ecc71; /* světlejší zelená */
+  border-left-color: #2ecc71;
+}
+
+/* Styl pro oznámení bez výsledků */
+.no-results {
+  background-color: #ffecec;
+  border: 1px solid #ff9999;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-out;
 }
 
 @keyframes fadeIn {
@@ -84,27 +113,23 @@ button:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.recipe h3 {
-  margin-top: 0;
-  color: #2c3e50;
+.no-results strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #e67e22;
 }
 
-.recipe {
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: 8px;
+
+/* Animace */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.missing {
-  color: #d9534f;
-  font-style: italic;
-}
+/* Tmavý režim */
 
-.recipe p {
-  margin: 5px 0;
-}
 
-/* 🌙 Tmavý režim */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1e1e1e;
@@ -133,6 +158,8 @@ button:hover {
     color: #fff;
   }
 }
+
+/* Stav hlasového ovládání */
 #voiceStatus {
   font-size: 16px;
   padding: 10px;
@@ -156,15 +183,39 @@ button:hover {
   color: #999;
 }
 
-.recipe {
-  padding: 1em;
-  margin-bottom: 1em;
-  border-radius: 8px;
-}
+/* Responzivní úpravy pro mobilní zařízení */
+  /* Mobilní optimalizace */
+@media (max-width: 600px) {
+  body {
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 
-.missing {
-  color: #d9534f;
-  font-style: italic;
+  input[type="text"] {
+    font-size: 14px;
+    padding: 8px;
+    max-width: 100%;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .recipe {
+    padding: 0.8em;
+  }
+
+  #voiceStatus {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
 
 
