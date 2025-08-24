@@ -4,12 +4,13 @@
 
 ## 🔧 Funkce
 
-- Vyhledávání receptů podle zadaných surovin
+- Písemné i hlasové Vyhledávání receptů podle zadaných surovin
 - Zobrazení receptů z databáze `recipes.json`
 - Jednoduché a přehledné uživatelské rozhraní
 - Stylové pozadí a ikona pro příjemný vizuální zážitek
 
 - https://hubacek123.github.io/zbytkovnik/
+
 
 
 
