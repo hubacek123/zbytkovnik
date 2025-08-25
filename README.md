@@ -11,7 +11,8 @@
 
 - https://hubacek123.github.io/zbytkovnik/
   
-### eautor: Svatopluk Votruba
+### autor: Svatopluk Votruba
+
 
 
 
