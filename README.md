@@ -10,6 +10,9 @@
 - Stylové pozadí a ikona pro příjemný vizuální zážitek
 
 - https://hubacek123.github.io/zbytkovnik/
+  
+### eautor: Svatopluk Votruba
+
 
 
 
