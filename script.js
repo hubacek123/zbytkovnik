@@ -82,9 +82,9 @@ function findRecipes() {
     recipeItem.style.borderRadius = "8px";
 
     recipeItem.innerHTML = `
-      <h3>${recipe.name}</h3>
+      <h3>${recipe.title}</h3>
       <p><button onclick="readRecipe(
-        '${recipe.name.replace(/'/g, "\\'")}',
+        '${recipe.title.replace(/'/g, "\\'")}',
         '${recipe.instructions.replace(/'/g, "\\'")}'
       )">🔊 Přečíst recept</button></p>
       <p><strong>Suroviny:</strong> ${recipe.ingredients.join(", ")}</p>
