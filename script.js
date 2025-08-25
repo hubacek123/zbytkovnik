@@ -147,10 +147,3 @@ function readRecipe(name, instructions) {
 
   speechSynthesis.speak(utterance);
 }
-fetch("recipes.json")
-  .then(res => res.json())
-  .then(data => {
-    console.log("Načtené recepty:", data); // ✅ Zkontroluj v konzoli
-    recipes = data;
-  })
-  .catch(err => console.error("Chyba při načítání receptů:", err));
