@@ -83,12 +83,12 @@ function findRecipes() {
 
     recipeItem.innerHTML = `
       <h3>${recipe.title}</h3>
-      <p><button onclick="readRecipe(
-        '${recipe.title.replace(/'/g, "\\'")}',
-        '${recipe.instructions.replace(/'/g, "\\'")}'
-      )">🔊 Přečíst recept</button></p>
+      <button onclick="readRecipe(
+  '${recipe.title.replace(/'/g, "\\'")}',
+  '${recipe.steps.join(", ").replace(/'/g, "\\'")}'
+)">
       <p><strong>Suroviny:</strong> ${recipe.ingredients.join(", ")}</p>
-      <p><strong>Postup:</strong> ${recipe.instructions}</p>
+      <p><strong>Postup:</strong> ${recipe.steps.join(", ")}</p>
     `;
 
     recipeList.appendChild(recipeItem);
