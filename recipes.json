@@ -1631,20 +1631,7 @@
       "Posyp sýrem a zapeč"
     ],
     "image": ""
-  },
-  {
-    "id": "134",
-    "title": "Chlebové knedlíky",
-    "description": "Smíchej suroviny, vytvaruj knedlíky a uvař ve vodě.",
-    "ingredients": ["starý chléb", "vejce", "mléko", "mouka", "sůl"],
-    "steps": [
-      "Nakrájej chléb",
-      "Smíchej s vejcem, mlékem, moukou a solí",
-      "Vytvaruj knedlíky",
-      "Uvař ve vroucí vodě"
-    ],
-    "image": ""
-  },
+  },  
   {
     "id": "135",
     "title": "Zapečené těstoviny s tvarohem",
